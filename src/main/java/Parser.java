@@ -26,27 +26,22 @@ public class Parser {
 
 
 
-    public static ArrayList<String> breakLines(String rawString){ //breaks file into lines of info
+    public String[] breakLines(String rawString){ //breaks file into lines of info
 
-        ArrayList<String> splitLines = new ArrayList<String>();
-        String[] linesArray = rawString.split("[##]");
+        Pattern pattern = Pattern.compile("##");
+        String [] linesArray = pattern.split(rawString);
 
-        for(String str: linesArray){
-
-            splitLines.add(str);
-        }
-
-        return splitLines;
-
-
-
+        return linesArray;
 
     }
 
     public ArrayList breakPair(){
+
     }
 
-    public Map storeKeyValues(){}
+    public Map storeKeyValues(){
+
+    }
 
 
 
